@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+description: Builder Bootcamp Lab 01 guided exercise
+
+prompts:
+  - '{{item.expected_answer}}'
+
+providers:
+  - id: echo
+    label: Pre-written answer
+
+defaultTest:
+  # TODO Step 1: Add the relevance and completeness llm-rubric assertion.
+  # TODO Step 2: Add the directness llm-rubric assertion.
+  # TODO Step 3: Add the deterministic expected-tool equality assertion.
+  assert: []
+
+tests:
+  - path: file://load_tests.py:generate_tests
+    config:
+      dataset: ../data/sample_01.jsonl
